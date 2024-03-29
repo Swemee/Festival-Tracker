@@ -57,3 +57,22 @@ resetBtn.onclick = function() {
 eventForm.onsubmit = function(event) {
     event.preventDefault(); // Prevent default form submission
 }
+// Display events on the main page
+function displayEvents(events) {
+    selectedEvents.innerHTML = ""; // Clear previous results
+    events.forEach(function(event) {
+        let li = document.createElement("li");
+        li.textContent = event.name;
+        li.addEventListener("click", function() {
+            // Add selected event to main webpage
+            let li = document.createElement("li");
+            li.textContent = event.name + " (" + event.dates.start.localDate + ")";
+            selectedEvents.appendChild(li);
+        });
+        selectedEvents.appendChild(li);
+    });
+}
+// Display message if no events are found
+function displayNoEventsFound() {
+    selectedEvents.innerHTML = "No events found for the selected location and date.";
+}
