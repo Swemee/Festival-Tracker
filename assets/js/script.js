@@ -13,9 +13,6 @@ let selectedEvents = document.getElementById("selectedEvents");
 // Reset button
 let resetBtn = document.getElementById("resetBtn");
 
-
-
-
 // Open modal
 openModalBtn.onclick = function() {
     modal.style.display = "block";
@@ -41,42 +38,56 @@ eventForm.onsubmit = function(event) {
     let location = document.getElementById("location").value;
     let date = document.getElementById("date").value;
 
-        // Fetch events from Ticketmaster API
-        fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=vPcBytlSIXMMaAICmG6wPiMssr9MxzF7&city=${encodeURIComponent(location)}&startDateTime=${date}T00:00:00Z`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data._embedded && data._embedded.events && data._embedded.events.length > 0) {
-                displayEvents(data._embedded.events);
-            } else {
-                displayNoEventsFound();
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
+    // Fetch events from Ticketmaster API
+    fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&apikey=vPcBytlSIXMMaAICmG6wPiMssr9MxzF7&city=${encodeURIComponent(location)}&startDateTime=${date}T00:00:00Z`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data._embedded && data._embedded.events && data._embedded.events.length > 0) {
+            displayEvents(data._embedded.events);
+        } else {
+            displayNoEventsFound();
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
 
 }
+
 // Display events on the main page
 function displayEvents(events) {
     selectedEvents.innerHTML = ""; // Clear previous results
     events.forEach(function(event) {
-        let li = document.createElement("li");
-        li.textContent = event.name;
-        li.addEventListener("click", function() {
-            // Add selected event to main webpage
-            let li = document.createElement("li");
-            li.textContent = event.name + " (" + event.dates.start.localDate + ")";
-            selectedEvents.appendChild(li);
+        let button = document.createElement("button");
+        button.textContent = event.name;
+        button.addEventListener("click", function() {
+            // Show Google Maps location
+            showGoogleMapLocation(event._embedded.venues[0].location.latitude, event._embedded.venues[0].location.longitude);
         });
-        selectedEvents.appendChild(li);
+        selectedEvents.appendChild(button);
     });
 }
+
 // Display message if no events are found
 function displayNoEventsFound() {
     selectedEvents.innerHTML = "No events found for the selected location and date.";
 }
+
+// Show Google Maps location
+function showGoogleMapLocation(latitude, longitude) {
+    let mapFrame = document.createElement("iframe");
+    mapFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/view?key=AIzaSyBNIIomFvvvMkhvigkrfJu0hVabuav04jQ&center=${latitude},${longitude}&zoom=17`);
+    mapFrame.setAttribute("width", "600");
+    mapFrame.setAttribute("height", "450");
+    mapFrame.setAttribute("allowfullscreen", "");
+    selectedEvents.innerHTML = ""; // Clear previous results
+    selectedEvents.appendChild(mapFrame);
+
+}
+
+
