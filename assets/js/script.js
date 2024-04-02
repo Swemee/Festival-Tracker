@@ -1,9 +1,3 @@
-// Open modal button
-let openModalBtn = document.getElementById("openModalBtn");
-// Close modal button
-let closeModalBtn = document.getElementsByClassName("close")[0];
-// Modal
-let modal = document.getElementById("myModal");
 // Event form
 let eventForm = document.getElementById("eventForm");
 // Main page
@@ -13,25 +7,11 @@ let selectedEvents = document.getElementById("selectedEvents");
 // Reset button
 let resetBtn = document.getElementById("resetBtn");
 
-// Open modal
-openModalBtn.onclick = function() {
-    modal.style.display = "block";
-}
-// Close modal
-closeModalBtn.onclick = function() {
-    modal.style.display = "none";
-}
-// Close modal when clicking outside the modal
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 // Reset button functionality
 resetBtn.onclick = function() {
     selectedEvents.innerHTML = ""; // Clear selected events
 }
-// Event form submission
+// // Event form submission
 eventForm.onsubmit = function(event) {
     event.preventDefault(); // Prevent default form submission
 
@@ -64,6 +44,8 @@ function displayEvents(events) {
     selectedEvents.innerHTML = ""; // Clear previous results
     events.forEach(function(event) {
         let button = document.createElement("button");
+        button.classList.add("text-white", "bg-gradient-to-br", "from-pink-500", "to-orange-400", "hover:bg-gradient-to-bl", "focus:ring-4", "focus:outline-none", "focus:ring-pink-200", 
+        "dark:focus:ring-pink-800", "font-medium", "rounded-lg", "text-sm", "px-5", "py-2.5", "text-center", "me-2", "mb-2");        
         button.textContent = event.name;
         button.addEventListener("click", function() {
             // Show Google Maps location
