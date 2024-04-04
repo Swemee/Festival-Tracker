@@ -7,18 +7,69 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 </head>
-<body>
-<!-- Modal toggle -->
+<body class="light">
+    <nav class="bg-black shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="./index.html" class="flex-shrink-0 flex items-center">
+                        <img class="block lg:hidden h-12 w-auto" src="./assets/images/MT1.png" alt="Music Tracker Compass Logo">
+                        <img class="hidden lg:block h-12 w-auto" src="./assets/images/MT1.png" alt="Music Tracker Compass Logo">
+                    </a>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center sm:justify-end">
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gradient-to-br from-pink-500 to-orange-400 focus:outline-none focus:text-gray-900">Home</a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gradient-to-br from-pink-500 to-orange-400 focus:outline-none focus:text-gray-900">Events</a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gradient-to-br from-pink-500 to-orange-400 focus:outline-none focus:text-gray-900">About Us</a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gradient-to-br from-pink-500 to-orange-400 focus:text-gray-900">Contact</a>
+                    <!-- Website Tips toggle button -->
+                    <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:outline-none focus:bg-gray-700">Website Tips</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Tips modal -->
+    <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Tips content -->
+            <div class="relative bg-black rounded-lg shadow dark:bg-gray-700">
+                <!-- Tips header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-white dark:text-white">
+                        Website Tips
+                    </h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Tips body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <p class="text-base leading-relaxed text-white dark:text-gray-400">
+                        Welcome to Music Tracker! Getting started is easy. Simply navigate through the intuitive menu options in the navigation bar to explore different sections of our website, including Home, Events, About, and Contact. Use the 'Events' section to discover exciting music festivals and plan your schedule effortlessly with our customizable itineraries. Have questions or feedback? Feel free to reach out to us through the 'Contact' section. Enjoy exploring and planning your next music festival adventure with Festival Tracker
+                    </p>
+                </div>
+                <!-- Tips footer -->
+                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <button data-modal-hide="default-modal" type="button" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Tracker Modal toggle -->
 <button data-modal-target="tracker-modal" data-modal-toggle="tracker-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
     Toggle modal
   </button>
   
-  <!-- Main modal -->
+  <!-- Tracker modal -->
   <div id="tracker-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
       <div class="relative p-4 w-full max-w-md max-h-full">
-          <!-- Modal content -->
+          <!-- Tracker content -->
           <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-              <!-- Modal header -->
+              <!-- Tracker header -->
               <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                   <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                       Search with Festival Tracker!
@@ -29,7 +80,7 @@
                       </svg>
                   </button>
               </div>
-              <!-- Modal body -->
+              <!-- Tracker body -->
               <div class="p-4 md:p-5">
                 <form id="eventForm" class="space-y-4" action="#">
                   <div class="grid gap-4 mb-4 grid-cols-2">
