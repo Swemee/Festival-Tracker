@@ -91,6 +91,8 @@ function displayNoEventsFound() {
 function showGoogleMapLocation(latitude, longitude) {
     let mapFrame = document.createElement("iframe");
     mapFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/view?key=AIzaSyBNIIomFvvvMkhvigkrfJu0hVabuav04jQ&center=${latitude},${longitude}&zoom=17`);
+    let markerUrl = `https://maps.google.com/maps?q=${latitude},${longitude}&z=17&t=&output=embed`;
+    mapFrame.setAttribute("src", markerUrl);
     mapFrame.setAttribute("width", "600");
     mapFrame.setAttribute("height", "450");
     mapFrame.setAttribute("allowfullscreen", "");
@@ -98,5 +100,3 @@ function showGoogleMapLocation(latitude, longitude) {
     selectedEvents.appendChild(mapFrame);
 
 }
-
-
