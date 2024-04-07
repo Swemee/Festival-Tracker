@@ -5,53 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link href="./assets/css/style.css" rel="stylesheet">
 </head>
 <body class="bg-black">
-    <nav class="bg-black shadow">
+    <div class="fixed-bg bg-cover" style="background-image: url('./assets/images/festiepic.png')"></div>
+        
+    <div class="overflow-auto">
+    <nav class="bg-black shadow-md shadow-zinc-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="./index.html" class="flex-shrink-0 flex items-center">
-                        <img class="block lg:hidden h-12 w-auto" src="./assets/images/MT1.png" alt="Music Tracker Compass Logo">
-                        <img class="hidden lg:block h-12 w-auto" src="./assets/images/MT1.png" alt="Music Tracker Compass Logo">
+                        <img class="block h-16 w-auto" src="./assets/images/MT1.png" alt="Music Tracker Compass Logo">
                     </a>
                 </div>
-                <div class="hidden sm:ml-6 sm:flex sm:items-center sm:justify-end">
+                <div class="ml-6 flex items-center justify-end">
                     <!-- Back toggle button -->
-                    <button class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:outline-none focus:bg-gray-700"><a href="./index.html">Back</button></a>
+                    <button class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:outline-none focus:bg-gray-700 hover:text-black"><a href="./index.html">Back</button></a>
                 </div>
             </div>
         </div>
     </nav>
     <section>
-        <h1 class="text-white text-5xl">About Us</h1>
-            <p class="text-white"></p>
+        <h1 class="text-center mt-8 xl:mt-16"><span id="about" class="text-white px-2 text-3xl md:text-4xl lg:text-5xl bg-black rounded-md shadow-md shadow-zinc-300 bg-opacity-40">About Us</span></h1>
+            <p class="text-white p-4 text-md md:text-lg mt-8 mx-8 md:mx-16 xl:mx-32 2xl:mx-44 mb-8 md:mb-16 xl:mb-32 2xl:mb-44 bg-black rounded-md shadow-md shadow-zinc-300 bg-opacity-40">At <strong>Music Tracker</strong>, we're passionate about bringing the magic of live music to your fingertips. 
+                Our platform offers a seamless way to dive into the vibrant world of music events, connecting you with concerts, and gigs in cities around the states. 
+                We are a small town bootcamp team looking to help the world get the best experience when it comes to music. <br><br>
+
+                Our future developments: <br><br>
+                
+                <b>Ticket Purchasing:</b> Partner with ticketing platforms to enable users to purchase tickets directly through the Music Tracker website, streamlining the event discovery and booking process. <br><br>
+                
+                <b>User Reviews and Ratings:</b> Implement a feature that allows users to leave reviews and ratings for events they've attended, providing valuable feedback for other users and organizers. <br><br>
+                
+                <b>Social Integration:</b> Enable social media integration to allow users to share their favorite events, invite friends, and connect with fellow music enthusiasts. <br><br>
+                
+                <b>Interactive Maps:</b> Integrate interactive maps that allow users to visually explore music events in around the searched area, providing a dynamic and immersive browsing experience. 
+            </p>
     </section>
-    <script src="./assets/js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <footer class="bg-black shadow border-t-2">
+    <footer class="bg-black border-t-2">
         <a href="./index.html" class="">
-            <img class="block lg:hidden h-28 w-auto mx-auto" src="./assets/images/MT1.png" alt="Music Tracker Compass Logo">
-            <img class="hidden lg:block h-28 w-auto mx-auto" src="./assets/images/MT1.png" alt="Music Tracker Compass Logo">
+            <img class="block h-20 sm:h-28 w-auto mx-auto" src="./assets/images/MT1.png" alt="Music Tracker Compass Logo">
         </a>
         <div class="flex">
             <div class="text-white text-center container mx-auto outline-dotted outline-1">
                 <p class="font-bold text-xl mt-2">About Us</p> <br>
-                <p class="p-2">Music Tracker, we understand the thrill of live music, the allure of a diverse crowd, and the magic of unforgettable performances. That's why we've created a platform dedicated to helping you find the hottest festivals around the globe. For more info <a href="./assets/html/aboutus.html">CLICK HERE</a></p>
+                <p class="p-2 text-xs sm:text-lg">Music Tracker, we understand the thrill of live music, the allure of a diverse crowd, and the magic of unforgettable performances. That's why we've created a platform dedicated to helping you find the hottest festivals around the globe. For more info <a href="./aboutus.html" class="hover:text-red-300">CLICK HERE</a></p>
             </div>
             <div class="text-white text-center container mx-auto outline-dotted outline-1">
                 <p class="font-bold text-xl mt-2">Contact Us</p> <br>
-                <p class="mb-4">
-                    <a href="mailto:isaak@marrerosite.com">isaak@marrerosite.com</a><br>
-                    <a href="mailto:t.23carocci@yahoo.com">t.23carocci@yahoo.com</a><br>
-                    <a href="mailto:ajgarza27@gmail.com">ajgarza27@gmail.com</a><br>
-                    <a href="mailto:sweme1@gmail.com">sweme2@gmail.com</a><br>
-                    <a href="mailto:frank.vasquez.school@gmail.com">frank.vasquez.school@gmail.com</a><br>
+                <p class="mb-4 text-xs sm:text-lg">
+                    <a href="mailto:isaak@marrerosite.com" class="hover:text-red-300">isaak@marrerosite.com</a><br>
+                    <a href="mailto:t.23carocci@yahoo.com" class="hover:text-red-300">t.23carocci@yahoo.com</a><br>
+                    <a href="mailto:ajgarza27@gmail.com" class="hover:text-red-300">ajgarza27@gmail.com</a><br>
+                    <a href="mailto:sweme1@gmail.com" class="hover:text-red-300">sweme2@gmail.com</a><br>
+                    <a href="mailto:frank.vasquez.school@gmail.com" class="hover:text-red-300">frank.vasquez.school@gmail.com</a><br>
                 </p>
             </div>
         </div>
         </div>
     </footer>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 </html>

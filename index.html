@@ -3,146 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Finder</title>
+    <title>Music Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link href="./assets/css/style.css" rel="stylesheet">
 </head>
-<body class="light">
-    <nav class="bg-black shadow">
+<body class="bg-black">
+    <div class="fixed-bg bg-cover" style="background-image: url('./assets/images/festiepic.png')"></div>
+        <!-- Content wrapper with scrolling content -->
+    <div class="overflow-auto">
+    <nav class="bg-black h-32 sm:h-16 m-0 fixed w-full shadow-md shadow-zinc-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="./index.html" class="flex-shrink-0 flex items-center">
-                        <img class="block lg:hidden h-12 w-auto" src="./assets/images/MT1.png" alt="Music Tracker Compass Logo">
-                        <img class="hidden lg:block h-12 w-auto" src="./assets/images/MT1.png" alt="Music Tracker Compass Logo">
-                    </a>
+            <div class="block sm:flex justify-between h-16">
+                <div class="sm:flex-shrink-0 sm:flex">
+                    <a href="./index.html" ><img class="mx-auto xs:hidden:mx-auto block h-16 w-auto" src="./assets/images/MT1.png" alt="Music Tracker Logo" ></a> 
                 </div>
-                <div class="hidden sm:ml-6 sm:flex sm:items-center sm:justify-end">
-                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gradient-to-br from-pink-500 to-orange-400 focus:outline-none focus:text-gray-900">Home</a>
-                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gradient-to-br from-pink-500 to-orange-400 focus:outline-none focus:text-gray-900">Events</a>
-                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gradient-to-br from-pink-500 to-orange-400 focus:outline-none focus:text-gray-900">About Us</a>
-                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gradient-to-br from-pink-500 to-orange-400 focus:text-gray-900">Contact</a>
+                <div class="ml-6 flex items-center justify-end">
+                    <a href="./index.html" class="px-3 py-2 hover:text-black rounded-md text-xs sm:text-sm font-medium text-white hover:bg-gradient-to-br from-pink-500 to-orange-400 focus:outline-none focus:text-gray-900">Home</a>
+                    <a href="https://github.com/Swemee/Festival-Tracker" class="px-3 py-2 hover:text-black rounded-md text-xs sm:text-sm font-medium text-white hover:bg-gradient-to-br from-pink-500 to-orange-400 focus:outline-none focus:text-gray-900">GitHub</a>
+                    <a href="#aboutUs" class="px-3 py-2 rounded-md hover:text-black text-xs sm:text-sm font-medium text-white hover:bg-gradient-to-br from-pink-500 to-orange-400 focus:outline-none focus:text-gray-900">About Us</a>
+                    <a href="#contactUs" class="px-3 py-2 rounded-md text-xs hover:text-black sm:text-sm font-medium text-white hover:bg-gradient-to-br from-pink-500 to-orange-400 focus:text-gray-900">Contact</a>
                     <!-- Website Tips toggle button -->
-                    <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:outline-none focus:bg-gray-700">Website Tips</button>
+                    <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="px-3 py-2 rounded-md text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 hover:text-black focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm text-center me-2 mb-2">Website Tips</button>
                 </div>
             </div>
         </div>
     </nav>
-  
     <!-- Tips modal -->
     <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-2xl max-h-full">
             <!-- Tips content -->
-            <div class="relative bg-black rounded-lg shadow dark:bg-gray-700">
+            <div class="relative bg-black rounded-lg shadow ">
                 <!-- Tips header -->
-                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-white dark:text-white">
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                    <h3 class="text-xl font-semibold text-white">
                         Website Tips
                     </h3>
-                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                    <button type="button" data-modal-hide="default-modal">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                         </svg>
-                        <span class="sr-only">Close modal</span>
                     </button>
                 </div>
                 <!-- Tips body -->
                 <div class="p-4 md:p-5 space-y-4">
-                    <p class="text-base leading-relaxed text-white dark:text-gray-400">
-                        Welcome to Music Tracker! Getting started is easy. Simply navigate through the intuitive menu options in the navigation bar to explore different sections of our website, including Home, Events, About, and Contact. Use the 'Events' section to discover exciting music festivals and plan your schedule effortlessly with our customizable itineraries. Have questions or feedback? Feel free to reach out to us through the 'Contact' section. Enjoy exploring and planning your next music festival adventure with Festival Tracker
+                    <p class="text-base leading-relaxed text-white">
+                        Getting started is easy. To locate music events near you, simply click 🎵SEARCH🎵 on the main page and put in the city, state with preferred date. 
+                        It will display the list of events on the screen for you to choose from.  
+                        Lastly, select an event and it will show you on google maps where it will be located. 
+                        Any questions or feedback, please feel free let us know in the Contact Us section! 
+                        Enjoy exploring and planning your next music adventure with Music Tracker! 
                     </p>
                 </div>
                 <!-- Tips footer -->
-                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <button data-modal-hide="default-modal" type="button" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I Understand</button>
+                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b">
+                    <button data-modal-hide="default-modal" type="button" class="text-white mx-auto bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center hover:text-black">I Understand</button>
                 </div>
             </div>
         </div>
     </div>
-<!-- Tracker Modal toggle -->
-<button data-modal-target="tracker-modal" data-modal-toggle="tracker-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-    Toggle modal
-  </button>
-  
-  <!-- Tracker modal -->
-  <div id="tracker-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-      <div class="relative p-4 w-full max-w-md max-h-full">
-          <!-- Tracker content -->
-          <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-              <!-- Tracker header -->
-              <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                  <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                      Search with Festival Tracker!
-                  </h3>
-                  <button data-modal-hide="tracker-modal" type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
-                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                      </svg>
-                  </button>
-              </div>
-              <!-- Tracker body -->
-              <div class="p-4 md:p-5">
-                <form id="eventForm" class="space-y-4" action="#">
-                  <div class="grid gap-4 mb-4 grid-cols-2">
-                    <div class="col-span-2 sm:col-span-1">
-                        <label for="location" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City:</label>
-                        <input type="text" name="location" id="location" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter the city.." required />
-                    </div>
-                    <div class="col-span-2 sm:col-span-1">
-                      <label for="state" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">State:</label>
-                      <input type="text" name="state" id="state" placeholder="Enter State Code (ex: TX)" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter the state.." required />
-                    </div>
-                  </div>
-                    <div>
-                        <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date</label>
-                        <input type="date" name="date" id="date" placeholder="Enter a date.." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="flex items-start">
-                            <div class="flex items-center h-5"></div>
+    <div>
+        <h2 class="mt-56 ml-4"><span id="welcome" class="text-white font-bold text-2xl sm:text-3xl md:text-5xl px-2 bg-black rounded-md shadow-lg shadow-zinc-300 bg-opacity-40">Welcome to Music Tracker</span><h2> 
+
+    </div>
+    <div> 
+        <p class="mt-52 mb-16 text-center"><span id="find" class="text-white px-2 text-center text-xl md:text-4xl bg-black rounded-md shadow-lg shadow-zinc-300 bg-opacity-40">Find events near you!</span></p>
+    </div>
+ 
+    <!-- Tracker modal toggle -->
+    <button data-modal-target="tracker-modal" data-modal-toggle="tracker-modal" class="block h-16 mb-4 w-48 mx-auto text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none hover:text-black focus:ring-pink-200 font-medium rounded-lg" type="button">
+        🎵SEARCH🎵
+    </button>
+
+    <!-- Tracker modal -->
+    <div id="tracker-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-md max-h-full">
+            <!-- Tracker content -->
+            <div class="relative bg-black rounded-lg">
+             <!-- Tracker header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                    <h3 class="text-xl font-semibold text-white">
+                        Search with Festival Tracker!
+                    </h3>
+                    <button data-modal-hide="tracker-modal" type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="authentication-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Tracker body -->
+                <div class="p-4 md:p-5">
+                    <form id="eventForm" class="space-y-4" action="#">
+                        <div class="grid gap-4 mb-4 grid-cols-2">
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="location" class="block mb-2 text-sm font-medium text-white">City:</label>
+                                <input type="text" name="location" id="location" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Enter the city.." required/>
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="state" class="block mb-2 text-sm font-medium text-white">State:</label>
+                                <input type="text" name="state" id="state" placeholder="Enter State Code (ex: TX)" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Enter the state.." required/>
+                            </div>
                         </div>
-                    </div>
-                    <button data-modal-hide="tracker-modal" type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Find Events</button>
-                 </form>
-               </div>
+                        <div>
+                            <label for="date" class="block mb-2 text-sm font-medium text-white">Date:</label>
+                            <input type="date" name="date" id="date" placeholder="Enter a date.." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required/>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex items-start">
+                            <div class="flex items-center h-5"></div>
+                            </div>
+                        </div>
+                            <button type="submit" id="submitButton" class="w-full text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 hover:text-black font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Find Events</button>  
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-    <div id="mainPage">
-        <h1>Main Webpage</h1>
-        <ul id="selectedEvents">
-            <!-- Selected events will be displayed here -->
-        </ul>
-        <button id="resetBtn" class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                Reset
-            </span></button>
-    </div>
-    <script src="./assets/js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <!-- Recent searches spot on the page -->
+        <div id="recentSearchesContainer">
+            <ul id="recentSearchesList">
+        <ul id="recentSearches"></ul>
+        <div id="mainPage" class="flex flex-col items-center h-full">
+            <ul id="selectedEvents" class="text-center mb-8">
+                <!-- Events will be here -->
+            </ul>
+            <button type="button" id="resetBtn" class="w-full mb-4 md:w-auto text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center hover:text-black">Clear</button>
+        </div>
+
     <footer class="bg-black shadow border-t-2">
         <a href="./index.html" class="">
-            <img class="block lg:hidden h-28 w-auto mx-auto" src="./assets/images/MT1.png" alt="Music Tracker Compass Logo">
-            <img class="hidden lg:block h-28 w-auto mx-auto" src="./assets/images/MT1.png" alt="Music Tracker Compass Logo">
+            <img class="block h-20 sm:h-28 w-auto mx-auto" src="./assets/images/MT1.png" alt="Music Tracker Logo">
         </a>
         <div class="flex">
             <div class="text-white text-center container mx-auto outline-dotted outline-1">
-                <p class="font-bold text-xl mt-2">About Us</p> <br>
-                <p class="p-2">Music Tracker, we understand the thrill of live music, the allure of a diverse crowd, and the magic of unforgettable performances. That's why we've created a platform dedicated to helping you find the hottest festivals around the globe. For more info <a href="./assets/html/aboutus.html">CLICK HERE</a></p>
+                <p id="aboutUs" class="font-bold text-xl mt-2">About Us</p> <br>
+                <p class="p-2 text-xs sm:text-lg">At Music Tracker, we understand the thrill of live music, the allure of a diverse crowd, and the magic of unforgettable performances. That's why we've created a platform dedicated to helping you find the hottest festivals around the globe. For more info <a href="./aboutus.html" class="hover:text-red-300">CLICK HERE.</a></p>
             </div>
             <div class="text-white text-center container mx-auto outline-dotted outline-1">
-                <p class="font-bold text-xl mt-2">Contact Us</p> <br>
-                <p class="mb-4">
-                    <a href="mailto:isaak@marrerosite.com">isaak@marrerosite.com</a><br>
-                    <a href="mailto:t.23carocci@yahoo.com">t.23carocci@yahoo.com</a><br>
-                    <a href="mailto:ajgarza27@gmail.com">ajgarza27@gmail.com</a><br>
-                    <a href="mailto:sweme1@gmail.com">sweme2@gmail.com</a><br>
-                    <a href="mailto:frank.vasquez.school@gmail.com">frank.vasquez.school@gmail.com</a><br>
+                <p id="contactUs" class="font-bold text-xl mt-2">Contact Us</p> <br>
+                <p class="mb-4 text-xs sm:text-lg">
+                    <a href="mailto:isaak@marrerosite.com" class="hover:text-red-300">isaak@marrerosite.com</a><br>
+                    <a href="mailto:t.23carocci@yahoo.com" class="hover:text-red-300">t.23carocci@yahoo.com</a><br>
+                    <a href="mailto:ajgarza27@gmail.com" class="hover:text-red-300">ajgarza27@gmail.com</a><br>
+                    <a href="mailto:sweme1@gmail.com" class="hover:text-red-300">sweme2@gmail.com</a><br>
+                    <a href="mailto:frank.vasquez.school@gmail.com" class="hover:text-red-300">frank.vasquez.school@gmail.com</a><br>
                 </p>
             </div>
         </div>
-        </div>
     </footer>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 </html>
