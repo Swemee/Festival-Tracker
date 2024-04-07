@@ -1,0 +1,31 @@
+/* Background Image */
+.bg-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Keeps BG image fixed */
+.fixed-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#welcome, #about {
+    font-family: "Russo One", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#find {
+    font-family: "Russo One", sans-serif;
+    font-style: normal;
+}
+
+@media (min-width:200px) and (max-width:640px) {
+    
+}
